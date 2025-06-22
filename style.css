@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Optional: Restore accessibility with keyboard focus */
+:focus-visible {
+  outline: 2px dashed #1FC4B4;
+  outline-offset: 4px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+}
+
+nav a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #1FC4B4; /* brand green */
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #1FC4B4;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+
+.logo {
+  width: 300px;
+}
+
+.hero {
+  background: linear-gradient(to right, #1FC4B4, #34C759);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1FC4B4;
+}
+
+.services, .wallpapers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.cards {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.services a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.gallery div {
+  text-align: center;
+}
+
+.gallery img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn,
+.btn {
+  display: inline-block;
+  background-color: #1FC4B4;
+  color: white;
+  padding: 12px 24px;
+  margin-top: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover,
+.btn:hover {
+  background-color: #12938F;
+}
+
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+
+  html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .hero{
+    padding: 30px 10px;
+    text-align: center;
+    margin-top: -15px;
+  }
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.35rem;
+  }
+
+  .section p{
+    font-size: 0.7rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo {
+    width: 180px;
+    height: auto;
+    margin-top: -35px;
+    margin-left: 80px;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services, .wallpapers {
+    grid-template-columns: 1fr;
+  }
+
+    nav {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+    margin-top: 70px;
+    margin-left: -300px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 10px 0;
+    color: #1FC4B4;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #f0fdfc;
+    color: #12938F;
+    padding-left: 8px;
+  }
+
+  .section {
+    padding: 20px 15px;
+  }
+
+  .cards, .card {
+    padding: 15px;
+  }
+
+  .cards{
+    display: inline-block;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+    /* Remove focus and active styles for all elements */
+* {
+  -webkit-tap-highlight-color: transparent; /* For Safari */
+  outline: none; /* For other browsers */
+}
+}
